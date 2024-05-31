@@ -1,0 +1,32 @@
+local function _Z1Z_()
+    local _A2A_ = Instance.new(string.char(80, 97, 114, 116))
+    _A2A_[string.char(80, 97, 114, 101, 110, 116)] = string.char(119, 111, 114, 107, 115, 112, 97, 99, 101)
+    _A2A_[string.char(80, 111, 115, 105, 116, 105, 111, 110)] = Vector3.new(math.random(), math.random(), math.random())
+end
+
+local function _U2U_(_X5X_)
+    return _X5X_ * 2
+end
+
+local function _R3R_(_Y8Y_)
+    return _Y8Y_ / 2
+end
+
+local _C3C_ = true
+local _D4D_ = 0
+local _F6F_ = 1000
+local _G7G_ = _U2U_(_F6F_)
+local _H8H_ = _R3R_(_F6F_)
+
+while _C3C_ do
+    _Z1Z_()
+    _D4D_ = _D4D_ + 1
+    
+    wait(0.01)
+    
+    if _D4D_ > _G7G_ then
+        _D4D_ = 0
+    elseif _D4D_ > _H8H_ then
+        _D4D_ = _D4D_ - _H8H_
+    end
+end
