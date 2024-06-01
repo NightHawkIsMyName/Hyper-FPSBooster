@@ -9,11 +9,8 @@ local function boostFPS()
     end
 
     for _, child in pairs(game:GetDescendants()) do
-        if child:IsA("Decal") or child:IsA("Texture") then
+        if child:IsA("Decal") then
             child:Destroy()
-        elseif child:IsA("BasePart") then
-            child.Material = Enum.Material.SmoothPlastic
-            child.Reflectance = 0
         elseif child:IsA("ParticleEmitter") or child:IsA("Trail") then
             child.Enabled = false
         end
